@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <link rel="stylesheet" href="/Users/hirokore-mac/workspace/vue_js/dic_vue_js_exam/sample.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="app">
+        <table>
+          <th>
+            <div class="form-name">
+              <p>名前：<input type="text" name="name" placeholder="名前を入力して下さい" v-model="addName"></p>
+            </div>
+          </th>
+          <th>
+            <div class="form-course">
+              <p>コース：<input type="text" name="course" placeholder="コースを入力して下さい" v-model="addCourse"></p>
+            </div>
+          </th>
+          <th>
+            <div class="form-between">
+              <p>受講期：<input type="text" name="between" placeholder="受講期を入力して下さい" v-model="addBetween"></p>
+            </div>
+          </th>
+        </table>
+        <button v-on:click="addToDo()">登録する</button><hr>
+        <ul v-for="(todo,index) in list">
+          <li>{{ index + 1 }}:【名前】{{ todo.name }}【コース】{{ todo.course }}【受講期】{{ todo.between }}</li>
+        </ul>
+      </div>
+    </div>
+    <script src="/Users/hirokore-mac/workspace/vue_js/dic_vue_js_exam/sample.js"></script>
+  </body>
+</html>

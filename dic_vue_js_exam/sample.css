@@ -1,0 +1,16 @@
+/* #app{ */
+  /* text-align:center; */
+/* } */
+
+input{
+  padding:5px 10px;
+  min-width:250px;
+}
+
+button{
+  width:10%;
+  background-color: rgb(32, 60, 172);
+  color:white;
+  border-radius:10px;
+  cursor:pointer;
+}
